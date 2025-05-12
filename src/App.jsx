@@ -80,7 +80,7 @@ function App() {
     gsap.to(".character", {
       scale: 1,
       x: "-50%",
-      bottom: "-50%",
+      bottom: "-40%",
       rotate: 0,
       duration: 2,
       delay: "-.8",
@@ -185,13 +185,13 @@ function App() {
                 src="./bg.png"
                 alt=""
               />
-              <div className="text text-white flex flex-col gap-1 md:gap-3 absolute top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
-                <h1 className="text-5xl sm:text-8xl md:text-[12rem] leading-none -ml-10 sm:-ml-20 md:-ml-40">grand</h1>
-                <h1 className="text-5xl sm:text-8xl md:text-[12rem] leading-none ml-5 sm:ml-10 md:ml-20">theft</h1>
-                <h1 className="text-5xl sm:text-8xl md:text-[12rem] leading-none -ml-10 sm:-ml-20 md:-ml-40">auto</h1>
+              <div className="text text-white flex flex-col gap-1 md:gap-3 absolute lg:top-20 top-[30%] left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
+                <h1 className="text-7xl sm:text-8xl md:text-[12rem] leading-none -ml-10 sm:-ml-20 md:-ml-40">grand</h1>
+                <h1 className="text-7xl sm:text-8xl md:text-[12rem] leading-none ml-5 sm:ml-10 md:ml-20">theft</h1>
+                <h1 className="text-7xl sm:text-8xl md:text-[12rem] leading-none -ml-10 sm:-ml-20 md:-ml-40">auto</h1>
               </div>
               <img
-                className="absolute character -bottom-[150%] left-1/2 -translate-x-1/2 scale-[] rotate-[-20deg]"
+                className="absolute character lg:-bottom-[150%] left-1/2 -translate-x-1/2 scale-[] rotate-[-20deg]"
                 src="./girlbg.png"
                 alt=""
               />
@@ -199,7 +199,7 @@ function App() {
             <div className="btmbar text-white absolute bottom-0 left-0 w-full py-8 md:py-15 px-5 md:px-10 bg-gradient-to-t from-black to-transparent">
               <div onClick={scrollToNextSection} className="flex gap-2 md:gap-4 z-50 absolute items-center cursor-pointer">
                 <i className="text-2xl md:text-4xl ri-arrow-down-line"></i>
-                <h3 className="text-sm md:text-xl font-[Helvetica_Now_Display]">
+                <h3 className="text-sm md:text-xl ">
                   Scroll Down
                 </h3>
               </div>
@@ -246,6 +246,11 @@ function App() {
           </div>
         </div>
       )}
+      <section className="text-center lg:py-16 py-4 bg-black h-full w-full">
+        <h1 className="text-cyan-50 text-6xl">
+          coming soon...
+        </h1>
+      </section>
       
     </>
   );
