@@ -4,6 +4,19 @@ import gsap from "gsap";
 import "remixicon/fonts/remixicon.css";
 
 function App() {
+  const [isPlaying, setIsPlaying] = useState(false);
+const audioRef = React.useRef(null);
+const toggleMusic = () => {
+  if (!audioRef.current) return;
+  if (isPlaying) {
+    audioRef.current.pause();
+  } else {
+    audioRef.current.play();
+  }
+  setIsPlaying(!isPlaying);
+};
+
+
   let [showContent, setShowContent] = useState(false);
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -135,6 +148,18 @@ function App() {
                 <h3 className="text-4xl -mt-[8px] leading-none text-white">
                   Rockstar
                 </h3>
+                <audio ref={audioRef} src="./bgm.mp3" loop autoPlay />
+
+<div className="absolute top-5 right-5 z-50">
+  <button
+    onClick={toggleMusic}
+    className="bg-white text-black px-4 py-2 rounded-full shadow-lg flex items-center gap-2"
+  >
+    <i className={`ri-${isPlaying ? "pause" : "play"}-line text-xl`}></i>
+    {isPlaying ? "Pause" : "Play"} Music
+  </button>
+</div>
+
               </div>
             </div>
 
