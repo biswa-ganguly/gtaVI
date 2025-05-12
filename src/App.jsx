@@ -161,9 +161,9 @@ function App() {
               />
             </div>
             <div className="btmbar text-white absolute bottom-0 left-0 w-full py-15 px-10 bg-gradient-to-t from-black to-transparent">
-              <div className="flex gap-4 items-center">
-                <i className="text-4xl ri-arrow-down-line"></i>
-                <h3 className="text-xl font-[Helvetica_Now_Display]">
+              <div className="flex gap-4  items-center">
+                <i className="text-4xl hidden lg:block ri-arrow-down-line"></i>
+                <h3 className="text-xl  hidden lg:block font-[Helvetica_Now_Display]">
                   Scroll Down
                 </h3>
               </div>
